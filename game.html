@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+
+        
+
+
+
+        @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: 'Mulish', sans-serif;
+
+        }
+
+        /*navbar*/
+        .navBar {
+            background-color: rgb(241, 241, 241);
+            width: 100%;
+            position: fixed;
+            top: 0px;
+        }
+
+
+        .navBar .button {
+            float: right;
+            font-size: 19px;
+            line-height: 19px;
+            padding: 16px 10px 16px 5px;
+        }
+
+        .navBar .buttonLight {
+            float: right;
+            font-size: 17px;
+            line-height: 19px;
+            padding: 27px 10px 16px 0px;
+        }
+
+        .navBar .buttonLight:hover {
+            margin-top: 16px;
+            border: 1px solid #ccc;
+            padding: 10px 9px 10px 10px;
+            background-color: #417ED7;
+            border-radius: 3px;
+        }
+
+        .navBar .buttonLight a:hove r {
+            color: white;
+        }
+
+        .navBar .buttonLight a {
+            color: black;
+        }
+
+        .btnPrimary {
+            background-color: #2C31CF;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+
+        .navBar .icon {
+            width: 29px;
+            float: right;
+            position: relative;
+            right: 280px;
+            top: 21px;
+        }
+
+        .btnPrimary:hover {
+            color: white;
+            background-color: #417ED7;
+            border: 1px solid #ccc;
+        }
+
+        .navBar .buttonLight input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .navBar .button input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navBar .logo img {
+            float: left;
+            padding: 12px 0px 12px 20px;
+            width: 150px;
+            margin-right: 20px;
+
+        }
+
+        .navBar .menu .menuLv1 {
+            position: relative;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1 {
+            display: inline-block;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .tieuDeMenuLv1 {
+            color: blue;
+
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .menuLv2 {
+            display: block;
+        }
+
+
+
+        .navBar .menu .menuLv1 .itemMenuLv1 .tieuDeMenuLv1 {
+            padding: 28px 15px;
+            font-size: 17px;
+            line-height: 20px;
+            display: block;
+            color: black;
+        }
+
+        .navBar .menu .menuLv2 {
+            position: absolute;
+            display: none;
+            border: 1px solid #bbbbbb;
+            background-color: white;
+            padding: 0px 15px;
+        }
+
+
+        .navBar .menu .menuLv2 .itemMenuLv2 {
+            padding: 15px 0px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2 {
+            color: black;
+            font-size: 14px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2:hover {
+            color: deepskyblue;
+        }
+
+        /*showImage*/
+
+        .showImage {
+            margin-top: 50px;
+        }
+
+
+        /*showcase*/
+
+        .showCase .container {
+            padding: 40px 100px 200px 100px;
+
+        }
+
+        .showCase {
+            height: 500px;
+            background-color: rgb(241, 241, 241);
+            border-bottom: 1px solid rgb(201, 201, 201);
+
+        }
+
+        .showCase .showCaseImage {
+            float: left;
+            width: 30%;
+        }
+
+        .showCase .space {
+            margin-right: 5%;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .hinhAnh {
+            width: 100%;
+            height: 275px;
+        }
+
+        .showCase img {
+            transition: transform .5s, filter 1.5s ease-in-out;
+            filter: grayscale(80%);
+        }
+
+        .showCase img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+        /*infomation*/
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem .mau {
+            color: #2C31CF;
+        }
+
+
+        .infomation .infomationAds {
+            width: 40%;
+            padding: 35px 0px 35px 90px;
+        }
+
+        .infomation .logo img {
+            width: 225px;
+        }
+
+        .infomation {
+            display: block;
+            position: relative;
+        }
+
+        .infomation .infomationDesc {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem {
+            float: right;
+            padding: 8px 50px 0px 0px;
+        }
+
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem h4 {
+            font-size: 20px;
+            color: #2C31CF;
+            margin-bottom: 20px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem p {
+            padding: 10px 60px 0px 0px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a {
+            color: #1C1D31;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a:hover {
+            text-decoration: underline;
+            color: #2C31CF;
+
+        }
+
+        .infomation .infomationDieuKhoan {
+            position: absolute;
+            right: 180px;
+            bottom: 45px;
+
+        }
+
+        /*nen*/
+        .nen .nenNhe 
+        {
+
+        }
+
+
+
+
+        /*footer*/
+        .footerDesc {
+            background-color: #1C1D31;
+            padding: 15px 0px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        /* mobile */
+        @media (max-width:768px)
+        {
+          
+        }
+
+        /* tablet */
+        @media (min-width:768px) and (max-width: 992px) 
+        {
+
+        }
+
+        /* destop nho  */
+        @media (min-width: 992px) and (max-width: 1200px)
+        {
+
+        }
+
+        /* destop big */
+        @media (min-width: 1200px)
+        {
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png" alt="">
+        </div>
+
+        <div class="menu">
+            <ul class="menuLv1">
+
+                <li class="itemMenuLv1">
+                    <a class="tieuDeMenuLv1" href="http://127.0.0.1:5500/TrangChu.htm">Trang chủ</a>
+                </li>
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv1">Học tập</a>
+
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv1">Luyện Tập </a>
+                    <ul class="menuLv2">
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Kiến thức cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Lập trình cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Lập trình nâng cao</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Giải quyết vấn đề</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Kỹ năng nâng cao</a>
+                        </li>
+                    </ul>
+                </li>
+
+               
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/ThaoLuan.html" class="tieuDeMenuLv1">Thảo Luận</a>
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/game.html" class="tieuDeMenuLv1">Game</a>
+
+                </li>
+
+                <div class="icon">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/vn.png" alt="">
+                </div>
+
+                <div class="button">
+                   <a href="http://127.0.0.1:5500/form.html"><input class="btn btnPrimary" type="submit" value="Đăng nhập"></a> 
+                </div>
+
+                <div class="buttonLight">
+                    <a href="http://127.0.0.1:5500/form.html" class="btn btnLight">Đăng ký</a>
+                </div>
+
+
+            </ul>
+
+        </div>
+
+
+
+
+    </nav>
+
+    <main>
+
+        
+
+        <div class="showImage">
+            <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/game/ai-game.png" alt="">
+        </div>
+
+
+
+        <section class="showCase">
+            <div class="container">
+
+                <div class="showCaseImage space">
+                    <img class="hinhAnh"
+                        src="https://codelearn.io/Upload/AIGame/63740100624.6503329ed246be6d45db9286d93dbb24389b.jpg"
+                        alt="">
+                </div>
+                <div class="showCaseImage space">
+                    <img class="hinhAnh"
+                        src="https://codelearn.io/Upload/AIGame/63730466567.906148c2004b141c4c7aa862d8ca8784d22f.jpg"
+                        alt="">
+                </div>
+                <div class="showCaseImage">
+                    <img class="hinhAnh"
+                        src="https://codelearn.io/Upload/AIGame/63730765573.3183c0f4dd58291c4db7937f20ea90dde527.jpg"
+                        alt="">
+                </div>
+        </section>
+
+       
+
+        <section class="infomation">
+            <div class="infomationAds">
+                <div class="logo">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png"
+                        alt="">
+                </div>
+                <p class="infomationDesc">
+                    CodeLearn là nền tảng tương tác trực tuyến hỗ trợ người dùng học tập, thực hành, thi đấu và đánh giá
+                    kỹ năng lập trình một cách nhanh chóng và chính xác.
+                </p>
+
+            </div>
+
+
+
+            <div class="infomationDieuKhoan">
+                <div class="infomationDieuKhoanItem">
+                    <h4 class="infomationDieuKhoanTieuDe">Liên kết</h4>
+                    <p>
+                        <a href="#">Học tập</a>
+                    </p>
+                    <p>
+                        <a href="#">Luyện tập</a>
+                    </p>
+                    <p>
+                        <a href="#">Cuộc thi</a>
+                    </p>
+
+                </div>
+
+                <div class="infomationDieuKhoanItem">
+                    <h4 class="infomationDieuKhoanTieuDe">Thông tin</h4>
+                    <p>
+                        <a href="#">Chia sẻ</a>
+                    </p>
+                    <p>
+                        <a href="#">Về chúng tôi</a>
+                    </p>
+                    <p>
+                        <a class="mau" href="http://127.0.0.1:5500/DieuKhoan.html">Điều khoản sử dụng</a>
+                    </p>
+                </div>
+
+                <div class="infomationDieuKhoanItem">
+                    <h4 class="infomationDieuKhoanTieuDe">Trợ giúp</h4>
+                    <p>
+                        <a href="#">Hỗ trợ</a>
+                    </p>
+                    <p>
+                        <a href="#">Thảo luận</a>
+                    </p>
+                    <p>
+                        <a href="#">Liên hệ với chúng tôi</a>
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="footerDesc">
+        <p>
+            Cung cấp bởi CodeLearn © 2021. Đã đăng ký bản quyền rev 12/13/2020 9:14:05 PM
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

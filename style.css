@@ -1,0 +1,819 @@
+@import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: 'Mulish', sans-serif;
+
+        }
+
+
+        .gioiThieu {
+            display: noe;
+        }
+
+        /*navbar*/
+        .navBar {
+            background-color: rgb(241, 241, 241);
+            width: 100%;
+            top: 0px;
+        }
+
+
+
+
+        .navBar .button {
+            float: right;
+            font-size: 19px;
+            line-height: 19px;
+            padding: 16px 10px 16px 5px;
+        }
+
+        .navBar .buttonLight {
+            float: right;
+            font-size: 17px;
+            line-height: 19px;
+            padding: 27px 10px 16px 0px;
+        }
+
+        .navBar .buttonLight:hover {
+            margin-top: 16px;
+            border: 1px solid #ccc;
+            padding: 10px 9px 10px 10px;
+            background-color: #417ED7;
+            border-radius: 3px;
+        }
+
+        .navBar .buttonLight a:hover {
+            color: white;
+        }
+
+        .navBar .buttonLight a {
+            color: black;
+        }
+
+        .btnPrimary {
+            background-color: #2C31CF;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+
+        .navBar .icon {
+            width: 29px;
+            float: right;
+            position: absolute;
+            right: 250px;
+            top: 21px;
+        }
+
+        .btnPrimary:hover {
+            color: white;
+            background-color: #417ED7;
+            border: 1px solid #ccc;
+        }
+
+        .navBar .buttonLight input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .navBar .button input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navBar .logo img {
+            float: left;
+            padding: 12px 0px 12px 20px;
+            width: 150px;
+            margin-right: 20px;
+
+        }
+
+        .navBar .menu .menuLv1 {
+            position: relative;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1 {
+            display: inline-block;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .tieuDeMenuLv1 {
+            color: blue;
+
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .menuLv2 {
+            display: block;
+        }
+
+
+
+        .navBar .menu .menuLv1 .itemMenuLv1 .tieuDeMenuLv1 {
+            padding: 28px 15px;
+            font-size: 17px;
+            line-height: 20px;
+            display: block;
+            color: black;
+        }
+
+        .navBar .menu .menuLv2 {
+            position: absolute;
+            display: none;
+            border: 1px solid #bbbbbb;
+            background-color: white;
+            padding: 0px 15px;
+        }
+
+
+        .navBar .menu .menuLv2 .itemMenuLv2 {
+            padding: 15px 0px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2 {
+            color: black;
+            font-size: 14px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2:hover {
+            color: deepskyblue;
+        }
+
+        /*showcase*/
+
+        .showCase .container {
+            padding: 40px 100px 200px 100px;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+
+
+        /*infomation*/
+      
+
+        /*showanh*/
+        .showAnh .showAnhHinh img {
+            margin-top: 140px;
+            width: 45%;
+        }
+
+        .showAnh .showAnhText {
+            background-color: white;
+            position: absolute;
+            bottom: 200px;
+            left: 400px;
+        }
+
+
+
+        .showAnh .showAnhText {
+            border: 0px solid rgb(119, 119, 119);
+            border-radius: 4px;
+            width: 600px;
+            height: 200px;
+            padding: 40px;
+
+        }
+
+        .showAnh .showAnhText .p1 {
+            font-size: 60px;
+            color: #2C31CF;
+        }
+
+        .showAnh .showAnhText .p2 {
+            font-size: 60px;
+            color: #2C31CF;
+            margin-top: 55px;
+        }
+
+        .showAnh .showAnhText .p3 {
+            font-size: 26px;
+            color: #1E266D;
+            margin-top: 30px;
+        }
+
+        .showAnh .showAnhText .p1 .p2 .p3 {
+            position: absolute;
+        }
+
+
+        /*form*/
+
+        .form {
+            position: absolute;
+            right: 100px;
+            top: 200px;
+            z-index: 1000;
+        }
+
+
+
+        .form .container p {
+            color: #1E266D;
+            font-size: 24px;
+        }
+
+        .form .mask {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            margin: auto;
+            width: 380px;
+            padding: 40px 20px;
+        }
+
+
+        .form input {
+            margin-top: 27px;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .form .inp {
+            width: 5%;
+        }
+
+
+        .form .mask .container input,
+        button {
+            display: block;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+        .form .mask .container input:focus,
+        button:focus {
+            border: 1px solid #417ED7;
+        }
+
+        .form .mask .container .inp {
+            display: inline-block;
+        }
+
+        .form .container button {
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            color: white;
+            background-color: #2C31CF;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        .form .container button:hover {
+            background-color: #4758f0;
+        }
+
+
+
+        .form label {
+            font-size: 16px;
+        }
+
+
+        /*hinhttron*/
+
+        .hinhTron {
+            width: 650px;
+            position: absolute;
+            right: 0px;
+        }
+
+        /*goithieu*/
+
+        .gioiThieu .gt {
+            background-color: rgb(231, 231, 231);
+            width: 100%;
+            height: 200px;
+        }
+
+        .gioiThieu .gt img {
+            width: 5%;
+        }
+
+        .gioiThieu .gt .img img {
+            margin-left: 110px;
+            margin-top: 50px;
+        }
+
+        /*text1*/
+
+        .text1 {
+            font-size: 44px;
+            text-align: center;
+            color: #1E266D;
+            margin-top: 480px;
+        }
+
+        .text1 h1 {
+            margin-bottom: 60px;
+        }
+
+
+        /*text*/
+
+        .text {
+            font-size: 44px;
+            text-align: center;
+            color: #1E266D;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .text .p1 {
+            margin-bottom: 41px;
+        }
+
+
+        /*thamgia*/
+
+        .thamGia .nen {
+            background-color: #2C31BF;
+            height: 300px;
+
+
+        }
+
+        .thamGia {
+            margin-bottom: 20px;
+        }
+
+
+
+        .thamGia p {
+            float: right;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-right: 155px;
+            line-height: 1.5;
+            margin-top: 50px;
+            font-size: 30px;
+        }
+
+        .thamGia .bt {
+            position: absolute;
+            left: 41%;
+            bottom: -620px;
+
+        }
+
+        .thamGia .bt button {
+            padding: 20px 30px;
+            font-size: 16px;
+            line-height: 20px;
+            color: white;
+            background-color: #E8505B;
+            border-radius: 4px;
+            outline: none;
+            border: 0px;
+        }
+
+        .thamGia .bt button:hover {
+            color: white;
+            background-color: #992c33;
+        }
+
+        /*lotrinh*/
+
+        .loTrinh .loTrinhMask
+        {
+            width: 100%;
+            margin: auto;
+            
+        }
+
+        .loTrinh .laptrinhItem {
+            width: 20%;
+            float: left;
+            box-shadow: 2px 7px 9px #ccc;
+        }
+
+        .loTrinh .laptrinhItem img {
+
+            margin-left: 65px;
+            width: 60%;
+            height: 30%;
+        }
+
+        .loTrinh .space {
+            margin-left: 4%;
+        }
+
+        .loTrinh h1 {
+            margin-top: 20px;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2C31CF;
+        }
+
+        .loTrinh p {
+            text-align: center;
+            font-size: 16px;
+            padding: 5px 10px;
+            color: #1b1d5e;
+            margin-bottom: 20px;
+        }
+
+        .loTrinh img {
+            transition: transform .5s, filter 1.5s ease-in-out;
+
+        }
+
+        .loTrinh img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+        /*uu diem*/
+        .uuDiem .matNa {
+            background-color: whitesmoke;
+        }
+
+
+
+        .uuDiem .h2 {
+            float: right;
+            width: 46%;
+            margin-top: 100px;
+            line-height: 24px;
+        }
+
+        .uuDiem img {
+            width: 50%;
+        }
+
+        .uuDiem p {
+
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: #1b1d5e;
+            position: relative;
+            bottom: 10px;
+
+        }
+
+        .uuDiem .matNa .icon img {
+            width: 5%;
+            margin-right: 10px;
+            margin-top: 20px;
+
+        }
+
+
+
+        /*infomation*/
+
+
+        .infomation .infomationAds , .infomationDieuKhoan
+        {
+            float: left;
+        }
+        .infomation .infomationAds .logo img
+        {
+            width: 230px;
+        }
+        .infomation .infomationAds
+        {
+            margin-left: 30px;
+            margin-top: 35px;
+        }
+        .infomation
+        {
+            background-color: rgb(223, 222, 222);
+            width: 100%;
+            height: 200px;
+           
+        }
+       
+        .infomationDieuKhoan .infomationDieuKhoanItem
+        {
+            float: left;
+        }
+
+        .infomationDieuKhoan .infomationDieuKhoanItem h4
+        {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #2C31BF;
+        }
+
+        .infomationDieuKhoan .infomationDieuKhoanItem p{
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #1a1a1a;
+        }
+
+        .infomationDieuKhoan .infomationDieuKhoanItem p a
+        {
+            color: #1a1a1a;
+        }
+
+        .infomation .infomationDieuKhoan .mau
+        {
+            color: #3c41da;
+        }
+
+        .infomation .infomationAds
+        {
+            width: 40%;   
+            float: left;
+        }
+        .infomation .infomationAds p
+        {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .infomationDieuKhoan .infomationDieuKhoanItem p a:hover
+        {
+            color: #3c41da;
+            text-decoration: underline;
+        }
+
+        .infomation .infomationDieuKhoan .i
+        {
+            margin-left: 90px;
+            margin-top: 40px;
+        }
+
+       
+
+        /*hinhtrinh*/
+        .hinhTron {
+            right: 0;
+
+        }
+
+        /*hinh anh hover*/
+
+
+
+
+        /*footer*/
+        .footerDesc {
+            background-color: #1C1D31;
+            padding: 15px 0px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+
+        /* mobile */
+        @media (max-width:768px) {
+
+
+            .navBar .icon {
+                position: relative;
+                left: -30px;
+            }
+
+            .hinhTron {
+                width: 56%;
+            }
+
+            .form {
+                position: absolute;
+
+
+            }
+
+            .form .container p {
+                font-size: 18px;
+            }
+
+            .form input {
+                margin-top: 14px;
+                padding: 13px;
+            }
+
+            .form .container button {
+                padding: 6px;
+                width: 100%;
+                margin-top: 10px;
+                color: white;
+                background-color: #2C31CF;
+                outline: none;
+                border-radius: 4px;
+            }
+
+            .form label {
+                font-size: 12px;
+            }
+
+
+
+            .form .mask {
+                width: 300px;
+                position: absolute;
+                bottom: -250px;
+                right: -50px;
+                padding: 25px 15px;
+            }
+
+            .gioiThieu .gt {
+                background-color: rgb(231, 231, 231);
+                width: 100%;
+                height: 100px;
+            }
+
+            .gioiThieu .gt img {
+                width: 5%;
+            }
+
+            .gioiThieu .gt .img img {
+                margin-left: 50px;
+                margin-top: 26px;
+            }
+
+            .showAnh .showAnhText {
+                border: 0px solid rgb(119, 119, 119);
+                border-radius: 4px;
+                width: 280px;
+                height: 140px;
+                padding: 20px;
+
+            }
+
+            .showAnh .showAnhText {
+                position: absolute;
+                left: 90px;
+                bottom: 900px;
+            }
+
+            .showAnh .showAnhText .p1 {
+                font-size: 20px;
+                color: #2C31CF;
+            }
+
+            .showAnh .showAnhText .p2 {
+                font-size: 20px;
+                color: #2C31CF;
+                margin-top: 15px;
+            }
+
+            .showAnh .showAnhText .p3 {
+                font-size: 20px;
+                color: #1E266D;
+                margin-top: 14px;
+            }
+
+            .showAnh .showAnhText .p1 .p2 .p3 {
+                position: absolute;
+            }
+
+            .thamGia .nen {
+                background-color: #2C31BF;
+                height: 300px;
+
+
+            }
+
+            .thamGia .p3 {
+                display: none;
+            }
+
+            .thamGia .p1 {
+                margin-right: 130px;
+            }
+
+            .thamGia .p2 {
+                display: none;
+            }
+
+
+            .thamGia p {
+
+                text-align: center;
+                color: white;
+                line-height: 1.5;
+                font-size: 20px;
+                width: 20%;
+            }
+
+
+            .thamGia .bt button {
+                padding: 20px 30px;
+                font-size: 16px;
+                line-height: 20px;
+                color: white;
+                background-color: #E8505B;
+                border-radius: 4px;
+                outline: none;
+                border: 0px;
+                position: relative;
+                bottom: 260px;
+                right: 75px;
+            }
+
+            .thamGia .bt button:hover {
+                color: white;
+                background-color: #992c33;
+            }
+
+
+            .loTrinh .laptrinhItem img {
+
+                margin-left: 35px;
+                width: 60%;
+                height: 30%;
+               
+            }
+
+            .loTrinh h1{
+                font-size: 18px;
+                margin-top: 2px;
+            }
+
+            .loTrinh p{
+                font-size: 13px;
+            }
+
+            .uuDiem p{
+                font-size: 16px;
+                margin-bottom: 0px;
+                position: relative;
+                bottom: 1px;
+            }
+
+            .uuDiem .h2
+            {
+                position: relative;
+                bottom: 80px;
+            }
+
+           .uuDiem .matNa .icon
+           {
+               
+           }
+
+
+           .infomation .infomationAds .logo  img
+           {
+               width: 50%;
+                
+           }
+           .infomation .infomationAds   p
+           {
+               font-size: 12px;
+           }
+           
+           .infomation .infomationDieuKhoan .i
+           {
+               margin-left: 40px;
+               margin-top: 40px;
+           }
+
+           .infomation .infomationDieuKhoan p
+           {
+               font-size: 10px;
+           }
+
+           .infomation .infomationDieuKhoan .infomationDieuKhoanItem
+           {
+               position: relative;
+               bottom: 55px;
+           }
+
+           .infomation .infomationDieuKhoan h4
+           {
+               font-size: 14px;
+           }
+
+
+           
+        }
+
+        /* tablet */
+        @media (min-width:768px) and (max-width: 992px) {}
+
+        /* destop nho  */
+        @media (min-width: 992px) and (max-width: 1200px) {}
+
+        /* destop big */
+        @media (min-width: 1200px) {}

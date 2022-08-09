@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khoản</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+        
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: 'Mulish', sans-serif;
+        }
+
+        .navBar ul {
+            list-style: none;
+        }
+
+        /*navbar*/
+        .navBar {
+            background-color: rgb(241, 241, 241);
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            box-shadow: 3px 3px 7px #ccc;
+        }
+
+
+        .navBar .button {
+            float: right;
+            font-size: 19px;
+            line-height: 19px;
+            padding: 16px 10px 16px 5px;
+        }
+
+        .navBar .buttonLight {
+            float: right;
+            font-size: 17px;
+            line-height: 19px;
+            padding: 27px 10px 16px 0px;
+        }
+
+        .navBar .buttonLight:hover {
+            margin-top: 16px;
+            border: 1px solid #ccc;
+            padding: 10px 9px 10px 10px;
+            background-color: #417ED7;
+            border-radius: 3px;
+        }
+
+        .navBar .buttonLight:hover a {
+            color: white;
+        }
+
+        .navBar .buttonLight a {
+            color: black;
+        }
+
+        .btnPrimary {
+            background-color: #2C31CF;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+
+        .navBar .icon {
+            width: 29px;
+            float: right;
+            position: relative;
+            right: 280px;
+            top: 21px;
+        }
+
+        .btnPrimary:hover {
+            color: white;
+            background-color: #417ED7;
+            border: 1px solid #ccc;
+            transition: all 300ms;
+        }
+
+        .navBar .buttonLight input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .navBar .button input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navBar .logo img {
+            float: left;
+            padding: 12px 0px 12px 20px;
+            width: 150px;
+            margin-right: 20px;
+
+        }
+
+        .navBar .menu .menuLv1 {
+            position: relative;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1 {
+            display: inline-block;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .tieuDeMenuLv1 {
+            color: blue;
+
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .menuLv2 {
+            display: block;
+        }
+
+
+
+        .navBar .menu .menuLv1 .itemMenuLv1 .tieuDeMenuLv1 {
+            padding: 28px 15px;
+            font-size: 17px;
+            line-height: 20px;
+            display: block;
+            color: black;
+        }
+
+
+
+
+        .navBar .menu .menuLv2 {
+            position: absolute;
+            display: none;
+            border: 1px solid #bbbbbb;
+            background-color: white;
+            padding: 0px 15px;
+        }
+
+
+        .navBar .menu .menuLv2 .itemMenuLv2 {
+            padding: 15px 0px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2 {
+            color: black;
+            font-size: 14px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2:hover {
+            color: deepskyblue;
+        }
+
+        /*note*/
+
+        .note {
+
+            margin-top: 10px;
+            font-size: 15px;
+
+
+        }
+
+        .note a {
+            color: #2C31CF;
+        }
+
+        .note a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        /*dieukhoan*/
+
+
+        .dieuKhoan .note {
+            text-align: left;
+        }
+
+        .dieuKhoan {
+            width: 70%;
+            margin: auto;
+            text-align: left;
+            margin-top: 100px;
+        }
+
+        .dieuKhoan .tieuDe1,
+        .tieuDe3 {
+            text-align: center;
+        }
+
+        .dieuKhoan .tieuDe1 {
+            padding: 50px 0px 30px 0px;
+            font-size: 36px;
+        }
+
+        .dieuKhoan .tieuDe3 {
+            margin-bottom: 35px;
+        }
+
+        hr {
+            margin-bottom: 40px;
+        }
+
+        .dieuKhoan .p1 {
+            font-size: 16px;
+            line-height: 26px;
+            color: #2C31CF;
+        }
+
+        .dieuKhoan .p2 {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+
+        .dieuKhoan .p2 a {
+            color: #2C31CF;
+        }
+
+        .dieuKhoan .p2 a:hover {
+            text-decoration: underline;
+            color: #1c1f80;
+        }
+
+        .dieuKhoan .p3 {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+
+        .dieuKhoan .tieuDe2 {
+            font-size: 17px;
+            line-height: 26px;
+            margin-top: 20px;
+            color: red;
+        }
+
+        .dieuKhoan .tieuDe4 {
+            font-size: 28px;
+            line-height: 26px;
+            margin-top: 20px;
+            color: #337AB7;
+        }
+
+        .dieuKhoan .p4 {
+            margin-left: 15px;
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+
+        }
+
+        .dieuKhoan .p44 {
+            margin-left: 15px;
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 30px;
+        }
+
+        .dieuKhoan #p44 {
+
+            margin-bottom: 80px;
+        }
+
+
+        .dieuKhoan .ul {
+            margin-left: 80px;
+            font-size: 16px;
+            line-height: 26px;
+            padding-top: 8px;
+        }
+
+        /*infomation*/
+
+
+
+        .infomation .infomationAds {
+            width: 40%;
+            padding: 35px 0px 35px 90px;
+        }
+
+        .infomation .logo img {
+            width: 225px;
+        }
+
+        .infomation {
+            display: block;
+            background-color: whitesmoke;
+            position: relative;
+            border-top: 1px solid #ccc;
+        }
+
+        .infomation .infomationDesc {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem {
+            float: right;
+            padding: 8px 50px 0px 0px;
+        }
+
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem h4 {
+            font-size: 20px;
+            color: #2C31CF;
+            margin-bottom: 20px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem p {
+            padding: 10px 60px 0px 0px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a {
+            color: #1C1D31;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a:hover {
+            text-decoration: underline;
+            color: #2C31CF;
+
+        }
+
+        .infomation .infomationDieuKhoan {
+            position: absolute;
+            right: 180px;
+            bottom: 45px;
+
+        }
+
+
+
+
+        /*footer*/
+        .footerDesc {
+            background-color: #1C1D31;
+            padding: 15px 0px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png" alt="">
+        </div>
+
+        <div class="menu">
+            <ul class="menuLv1">
+
+                <li class="itemMenuLv1">
+                    <a class="tieuDeMenuLv1" href="http://127.0.0.1:5500/TrangChu.htm">Trang chủ</a>
+                </li>
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv1">Học tập</a>
+
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="#" class="tieuDeMenuLv1">Luyện Tập </a>
+                    <ul class="menuLv2">
+                        <li class="itemMenuLv2">
+                            <a href="#" class="tieuDeMenuLv2">Kiến thức cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="#" class="tieuDeMenuLv2">Lập trình cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="#" class="tieuDeMenuLv2">Lập trình nâng cao</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="" class="tieuDeMenuLv2">Giải quyết vấn đề</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="" class="tieuDeMenuLv2">Kỹ năng nâng cao</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/game.html" class="tieuDeMenuLv1">Game</a>
+
+                </li>
+
+
+               
+
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/ThaoLuan.html" class="tieuDeMenuLv1">Thảo Luận</a>
+                </li>
+
+                <div class="button">
+                    <input class="btn btnPrimary" type="submit" value="Đăng nhập">
+                </div>
+
+                <div class="buttonLight">
+                    <a href="http://127.0.0.1:5500/form.html" class="btn btnLight">Đăng ký</a>
+                </div>
+
+
+            </ul>
+
+        </div>
+
+
+
+
+    </nav>
+
+
+
+    <section class="dieuKhoan">
+        <div class="note">
+            <a href="#">Trang chủ</a>
+            <span> > </span>
+            <a href="#">Điều khoản sử dụng</a>
+        </div>
+
+        <h1 class="tieuDe1">Điều Khoản Sử Dụng CodeLearn</h1>
+        <h3 class="tieuDe3">Thông tin & Thông báo pháp lý</h3>
+        <hr>
+
+        <p class="p1">
+            <i> Vui lòng đọc “Điều khoản sử dụng” này nếu bạn đang xem xét sử dụng bất cứ tài liệu, dịch vụ hoặc thông
+                tin nào trên hệ thống. Lưu ý rằng bằng việc truy cập hoặc sử dụng trang của chúng tôi nghĩa là bạn đồng
+                ý với những điều khoản sử dụng này. Nếu bạn không đồng ý với điều khoản sử dụng của chúng tôi, hãy ngưng
+                kết nối và không sử dụng trang này.</i>
+
+        </p>
+
+        <p class="p2">
+            Chào mừng đến với Codelearn.io. Vui lòng đọc tiếp để tìm hiểu các quy tắc và những hạn chế chi phối việc bạn
+            sử dụng trang web, sản phẩm và dịch vụ của chúng tôi (gọi chung là “Dịch vụ”). Dịch vụ này được sở hữu và
+            vận hành bởi Công ty TNHH Phần mềm FPT (FPT Software). Nếu bạn có bất kỳ câu hỏi, nhận xét hoặc quan tâm nào
+            về các điều khoản hoặc Dịch vụ này, vui lòng liên hệ với chúng tôi tại <a href="#">support@codelearn.io</a>
+            hoặc tại địa chỉ
+            Tòa nhà FPT Cầu Giấy, Đường Duy Tân, Cầu Giấy, Hà Nội, Việt Nam.
+        </p>
+
+        <p class="p3">
+            Khi chúng tôi đề cập đến các từ khoá như “bạn” hoặc “của bạn” nghĩa là chúng tôi đang nói về bạn (bao gồm cả
+            khi bạn tham gia vào các điều khoản này thay mặt cho bên thứ ba). Khi chúng tôi đề cập đến các từ khoá như
+            “chúng tôi”, “của chúng tôi” hoặc “FPT Software”, chúng tôi đang nói về các dịch vụ và công ty của mình (bao
+            gồm đại diện cho các cán bộ, giám đốc, nhà đầu tư, đại lý, nhân viên).
+        </p>
+
+        <h2 class="tieuDe2">
+            MỘT LẦN NỮA, VUI LÒNG ĐỌC NHỮNG ĐIỀU KHOẢN NÀY THẬT CẨN THẬN ĐỂ ĐẢM BẢO RẰNG BẠN HIỂU TỪNG QUY ĐỊNH.
+        </h2>
+
+        <h4 class="tieuDe4">
+            | Sử dụng thông tin cá nhân để đăng ký, sử dụng.
+        </h4>
+
+        <p class="p4">
+            Người sử dụng phải đủ năng lực hành vi dân sự mới được phép đăng ký Codelearn.io. Chúng tôi có quyền từ chối
+            đăng ký hoặc hủy bỏ bất kỳ tài khoản Codelearn nào hoặc bất kỳ ai truy cập vào Codelearn theo quyết định hợp
+            lý của chúng tôi bất cứ lúc nào. Tài khoản Codelearn sẽ được truy cập thông qua tên người dùng và mật khẩu
+            mà bạn sẽ tạo (Gọi chung là “Thông tin xác thực”). Thông tin xác thực của bạn chỉ dành cho việc sử dụng của
+            bạn và không được chia sẻ cho bất kì ai. Mỗi một người dùng của hệ thống (gọi chung là “người dùng”) cần
+            phải có tài khoản và thông tin của riêng mình. Bạn đồng ý rằng thông tin xác thực và các thông tin mà bạn
+            cung cấp khi đăng ký tài khoản Codelearn phải luôn chính xác và đầy đủ. Bạn có trách nhiệm duy trì tính bảo
+            mật của thông tin xác thực và hoàn toàn chịu trách nhiệm về mọi hoạt động diễn ra liên quan đến mật khẩu
+            hoặc tài khoản của bạn. Bạn đồng ý thông báo ngay cho chúng tôi về bất kỳ việc sử dụng trái phép tài khoản
+            Codelearn, thông tin xác thực hoặc bất kỳ vi phạm bảo mật nào khác. Bạn đồng ý rằng chúng tôi sẽ không chịu
+            trách nhiệm cho bất kỳ tổn thất hoặc thiệt hại nào phát sinh từ việc bạn không cung cấp cho chúng tôi thông
+            tin chính xác hoặc để bảo mật thông tin của bạn.
+        </p>
+
+        <h4 class="tieuDe4">| Nội dung được nộp</h4>
+
+        <p class="p4">
+            <b> 1. Codelearn cung cấp một số tính năng nhất định: </b> Cho phép người dùng gửi, đăng và chia sẻ dữ liệu,
+            văn bản,
+            phần mềm, đồ họa, tin nhắn hoặc tài liệu khác (Gọi chung là “Nội dung”). Nội dung mà người dùng gửi, đăng
+            hoặc chia sẻ phải tuân theo các điều khoản sử dụng. Nội dung mà bạn sở hữu và đăng trên hoặc thông qua
+            Codelearn thuộc về bạn và bạn có thể sử dụng nó theo bất kỳ cách nào, trừ khi bị cấm theo luật hoặc quy định
+            hiện hành. Khi bạn sử dụng Codelearn đồng nghĩa với việc bạn đang cấp cho chúng tôi quyền sử dụng nội dung
+            này.
+        </p>
+
+        <p class="p4">
+            <b>2. Khi bạn đăng nội dung trên hoặc thông qua Codelearn:</b> Chúng tôi sẽ có quyền tiếp tục sử dụng nội
+            dung này
+            ngay cả khi bạn khoá tài khoản Codelearn của bạn và / hoặc ngừng sử dụng Codelearn.
+        </p>
+
+        <p class="p4">
+            <b> 3. Bạn phải chịu trách nhiệm về tất cả nội dung của bạn tạo ra: </b> Tuyên truyền hoặc hiển thị trên
+            Codelearn.
+            Bạn cũng đồng ý rằng trong mọi trường hợp, chúng tôi sẽ không chịu trách nhiệm về các lỗi hoặc thiếu sót
+            liên quan đến nội dung của bạn. Bạn đại diện và đồng ý với tất cả những điều sau đây khi muốn đăng tải nội
+            dung trên Codelearn:
+
+        </p>
+        <ul class="ul">
+            <li>
+                <p>Nội dung đăng tải phải thuộc sở hũu của bạn. Bạn có tất cả các quyền cần thiết để đăng tải nội dung
+                    trên trang. Khi làm như vậy, bạn không vi phạm quyền của bất kỳ bên thứ ba nào và bạn biết rằng
+                    không có cá nhân hoặc tổ chức nào khác có quyền xâm phạm hoặc vi phạm bởi nội dung được xem và sử
+                    dụng như được mô tả trong các điều khoản này.</p>
+            </li>
+        </ul>
+        <ul class="ul">
+            <li>
+                <p>
+                    Bạn đồng ý chỉ sử dụng Codelearn cho các mục đích hợp pháp và phù hợp với các điều khoản này. Việc
+                    bạn đăng tải nội dung của bạn không vi phạm mối quan hệ bí mật với bất kỳ bên thứ ba nào hoặc thiết
+                    lập mối quan hệ bí mật nào với chúng tôi.
+                </p>
+            </li>
+        </ul>
+
+        <ul class="ul">
+            <li>
+                <p>
+                    Bạn hiểu rằng bạn chịu trách nhiệm về nội dung mà bạn tải lên thông qua Codelearn. Trừ khi được cho
+                    phép trong các điều khoản này, bạn không có quyền sử dụng, sao chép, chia sẻ, công khai hoặc hiển
+                    thị công khai bất kỳ nội dung nào không thuộc về bạn, ngoài việc xem nội dung hoặc các tham dự các
+                    hoạt động liên quan trên hoặc thông qua Codelearn.
+                </p>
+            </li>
+        </ul>
+
+        <p class="p4">
+            <b> 4. Chúng tôi không thể và không cần kiểm soát tất cả nội dung: </b> Nội dung được đăng bởi người dùng
+            trên hoặc
+            thông qua Codelearn và chúng tôi không đảm bảo tính chính xác, tính toàn vẹn hoặc chất lượng của nội dung
+            đó. Bạn phải đồng ý rằng trong mọi trường hợp, chúng tôi sẽ không chịu trách nhiệm cho bất kỳ nội dung nào,
+            bao gồm mọi lỗi hoặc thiếu sót trong bất kỳ nội dung, hoặc bất kỳ mất mát hoặc thiệt hại dưới bất kỳ hình
+            thức nào. Bạn hiểu rằng bạn phải đánh giá và chịu mọi rủi ro liên quan đến việc sử dụng bất kỳ nội dung nào,
+            bao gồm mọi sự phụ thuộc vào nội dung, tính toàn vẹn và tính chính xác của nội dung đó. Chúng tôi không xác
+            nhận và không chịu trách nhiệm về tính chính xác, an toàn liên quan đến nội dung.
+        </p>
+
+        <p class="p4">
+            <b> 5. Chúng tôi có quyền xem xét, từ chối một số nội dung nhất định: </b> Nội dung được tải lên và lưu trữ
+            tại Codelearn hoặc chỉnh sửa, hoặc xóa bất kỳ nội dung nào, vào bất kỳ lúc nào mà không cần thông báo trước.
+        </p>
+
+        <p class="p4">
+            <b> 6. Phản hồi:</b> Nếu bạn cung cấp cho chúng tôi bất kỳ nhận xét, báo cáo lỗi, phản hồi hoặc sửa đổi nào
+            , chúng
+            tôi có quyền sử dụng phản hồi đó theo quyết định của chúng tôi. Khi gửi phản hồi cho hệ thống đồng nghĩa với
+            việc bạn cấp cho chúng tôi quyền sử dụng phản hồi của bạn cho bất kỳ mục đích nào.
+        </p>
+
+        <h4 class="tieuDe4">| Quy tắc ứng xử</h4>
+        <p class="p4">
+            <b> 1. Chúng tôi có quyền, nhưng không có nghĩa vụ, xóa hoặc chặn nội dung khỏi Codelearn:</b> Chúng tôi chỉ
+            xác
+            định theo quyết định hợp lý của chúng tôi là vi phạm các điều khoản này là bất hợp pháp, xúc phạm, đe dọa,
+            bôi nhọ, phỉ báng, nói xấu hoặc nói cách khác, vi phạm quyền sở hữu trí tuệ của bất kỳ bên nào hoặc gây bất
+            lợi cho chất lượng hoặc tinh thần dự định của Codelearn. Chúng tôi cũng có quyền, nhưng không có nghĩa vụ,
+            giới hạn hoặc thu hồi các đặc quyền sử dụng của tài khoản Codelearn của bất kỳ Codelearner nào đăng nội dung
+            đó hoặc tham gia vào hành vi đó.
+        </p>
+
+        <p class="p4">
+            <b>2. Bạn chịu trách nhiệm cho sự tương tác của bạn với những người dùng khác thông qua Codelearn: </b> Nếu
+            bạn có tranh chấp với một hoặc nhiều người dùng hoặc nếu bạn không đồng ý với kết quả của thử thách, biện
+            pháp khắc phục duy nhất của bạn là ngừng sử dụng Codelearn.
+        </p>
+
+        <p class="p4">
+            <b> 3. Không cho phép vi phạm bản quyền: </b> Chúng tôi không cho phép các hoạt động vi phạm bản quyền thông
+            qua Codelearn và chúng tôi có quyền chấm dứt quyền truy cập vào Codelearn và xóa tất cả nội dung được gửi
+            bởi bất kỳ ai bị phát hiện là người vi phạm. Bất kỳ hành vi nghi ngờ gian lận, lạm dụng hoặc bất hợp pháp
+            nào đều có thể là căn cứ để chấm dứt việc sử dụng Codelearn của bạn và có thể được chuyển đến các cơ quan
+            thực thi pháp luật.
+        </p>
+
+        <p class="p4">
+            <b> 4. Sử dụng ý thức kinh doanh: </b> Chúng tôi sẽ sử dụng ý thức kinh doanh chung về hành vi hoặc nội dung
+            được
+            phép trên hoặc thông qua Codelearn ví dụ về nội dung hoặc hành vi không được chấp nhận bao gồm:
+        </p>
+        <ul class="ul">
+            <li>
+                <p>Lạm dụng, quấy rối hoặc đe dọa bất kỳ người nào hoặc tổ chức nào.</p>
+            </li>
+        </ul>
+        <ul class="ul">
+            <li>
+                <p>
+                    Tải lên hoặc gửi nội dung khiêu dâm, đe dọa, kích động, xúc phạm chủng tộc hoặc dân tộc, bôi nhọ
+                    hoặc những nội dung không phù hợp.
+                </p>
+            </li>
+        </ul>
+        <ul class="ul">
+            <li>
+                <p>Tải lên tài liệu có bản quyền không phải của riêng bạn hoặc bạn không có quyền hợp pháp để phân phối,
+                    hiển thị và cung cấp cho người khác.</p>
+            </li>
+        </ul>
+        <ul class="ul">
+            <li>
+                <p>Mạo danh người khác hoặc giả vờ liên kết với một tổ chức mà bạn không liên kết hoặc xuyên tạc về mức
+                    độ liên kết hoặc vai trò của bạn với một tổ chức liên kết hoặc nguồn, danh tính hoặc nội dung được
+                    truyền.</p>
+            </li>
+        </ul>
+        <ul class="ul">
+            <li>
+                <p>Tham gia hoặc đóng góp vào bất kỳ hoạt động hoặc hoạt động bất hợp pháp nào vi phạm quyền của người
+                    khác.
+                </p>
+            </li>
+        </ul>
+        <ul class="ul">
+            <li>
+                <p>
+                    Sử dụng ngôn ngữ đồ họa xúc phạm, phân biệt đối xử hoặc quá mức.
+                </p>
+            </li>
+        </ul>
+
+        <ul class="ul">
+            <li>
+                <p>Truyền virus hoặc các phần mềm có hại.</p>
+            </li>
+        </ul>
+
+        <ul class="ul">
+            <li>
+                <p>Tiết lộ thông tin cá nhân hoặc quyền sở hữu của người hoặc tổ chức khác không được phép theo các quy
+                    tắc hoặc luật hiện hành.</p>
+            </li>
+        </ul>
+
+        <ul class="ul">
+            <li>
+                <p>Chia sẻ tài khoản hoặc thông tin xác thực Codelearn với bất kỳ bên thứ ba nào hoặc khuyến khích bất
+                    kỳ người dùng nào khác làm như vậy.</p>
+            </li>
+        </ul>
+
+        <h4 class="tieuDe4">| Chấm dứt</h4>
+        <p class="p4">
+            <b>1. Chấm dứt tài khoản của bạn: </b> Chúng tôi, theo quyết định của mình có thể chấm dứt tài khoản
+            Codelearn, thông tin xác thực của bạn. Xoá và loại bỏ bất kỳ nội dung nào trong Codelearn nếu chúng tôi tin
+            rằng bạn đã vi phạm hoặc hành động không nhất quán với các điều khoản này.
+        </p>
+
+        <p class="p4">
+            <b> 2. Bạn tự chấm dứt tài khoản của bạn: </b> Bạn có thể chấm dứt tài khoản Codelearn và quyền sử dụng
+            Codelearn của bạn bất cứ lúc nào và vì bất kỳ lý do nào hoặc không có lý do, bằng cách liên hệ với bộ phận
+            hỗ trợ người dùng của chúng tôi tại support@codelearn.io. Tuy nhiên, nếu bạn có một thỏa thuận riêng với
+            chúng tôi có các điều khoản mâu thuẫn về việc chấm dứt, các điều khoản đó sẽ được ưu tiên.
+        </p>
+        <p class="p4">
+            <b>3. Không có quyền truy cập:</b> Sau khi hủy hoặc chấm dứt tài khoản Codelearn của bạn vì bất kỳ lý do gì,
+            bạn sẽ
+            không còn có quyền truy cập vào tài khoản Codelearn của bạn và tất cả thông tin và nội dung trong tài khoản
+            Codelearn của bạn. Chúng tôi sẽ không chịu trách nhiệm đối với thông tin hoặc nội dung bị xóa do hủy hoặc
+            chấm dứt tài khoản Codelearn của bạn vì bất kỳ lý do nào.
+        </p>
+        <h4 class="tieuDe4">| Quyền sở hữu</h4>
+        <p class="p4">Codelearn được sở hữu và vận hành bởi Công ty TNHH FPT Software. Các giao diện trực quan, đồ họa,
+            thiết kế, biên dịch, thông tin, mã máy tính, sản phẩm, phần mềm (bao gồm mọi phần mềm có thể tải xuống),
+            dịch vụ và tất cả các yếu tố khác của Codelearn do FPT Software cung cấp được bảo vệ bởi bản quyền, thương
+            mại của Việt Nam. Ngoại trừ mọi nội dung hoặc nội dung của bên thứ ba do bạn tải lên, tất cả tài liệu đều là
+            tài sản có bản quyền của Phần mềm FPT hoặc các công ty con hoặc công ty liên kết và / hoặc bên cấp phép bên
+            thứ ba. Tất cả các nhãn hiệu, nhãn hiệu dịch vụ và tên thương mại là độc quyền của Công ty TNHH Phần mềm FPT
+            hoặc các chi nhánh và / hoặc bên cấp phép bên thứ ba. Trừ khi được ủy quyền rõ ràng bởi Công ty TNHH Phần
+            mềm FPT, bạn đồng ý không bán, cấp phép, phân phối, sao chép, sửa đổi, thực hiện công khai hoặc hiển thị,
+            truyền, xuất bản, chỉnh sửa, điều chỉnh, tạo tác phẩm phái sinh từ hoặc sử dụng trái phép tài liệu.</p>
+
+        <h4 class="tieuDe4">| Trang web và dịch vụ của bên thứ ba</h4>
+        <p class="p4">
+            Trang của chúng tôi có thể chứa các liên kết đến những trang trên Internet do các bên thứ ba sở hữu, công bố
+            hoặc duy trì. Các trang liên kết không thuộc quyền quản lý của chúng tôi và do đó FPT Software không chịu
+            trách nhiệm về nội dung của các trang liên kết đó. FPT Software nghiêm cấm các liên kết dẫn đến trang mà
+            không có sự đồng ý của chúng tôi. Các liên kết sẽ không nhằm mục đích, tạo ra hoặc dẫn đến sự liên kết pháp
+            lý giữa FPT Software và bất kỳ bên thứ ba nào, bất cứ nghĩa vụ hoặc trách nhiệm nào về phía FPT Software đối
+            với nội dung, lời khuyên, các bài giới thiệu, các sản phẩm hoặc dịch vụ của bất kỳ bên thứ ba nào, hoặc bất
+            cứ sự xác nhận, bảo hành hay bảo đảm nào về các sản phẩm và dịch vụ hay hiệu quả hoặc chất lượng của chúng.
+        </p>
+        <h4 class="tieuDe4">| Bồi thường</h4>
+        <p class="p4">
+            Bạn đồng ý bồi thường và giữ cho công ty FPT Software, các công ty liên kết, nhà cung cấp, đối tác, cán bộ,
+            nhà thầu và nhân viên của mình vô hại trước mọi khiếu nại hoặc yêu cầu của bất kỳ bên thứ ba nào do hoặc
+            phát sinh từ hành động của bạn trong sử dụng Codelearn, khiếu nại rằng bạn hoặc bất kỳ bên thứ ba nào sử
+            dụng thông tin xác thực của bạn, đã vi phạm bất kỳ quyền sở hữu trí tuệ hoặc quyền nào khác của bất kỳ cá
+            nhân hoặc tổ chức nào khi sử dụng Codelearn hoặc vi phạm các điều khoản này của bạn hoặc bất kỳ bên thứ ba
+            nào khi sử dụng bạn thông tin xác thực. Công ty FPT Software bảo lưu quyền, bằng chi phí của chúng tôi, đảm
+            nhận việc bảo vệ và kiểm soát độc quyền bất kỳ vấn đề nào mà bạn bắt buộc phải bồi thường cho chúng tôi và
+            bạn đồng ý hợp tác với chúng tôi để bảo vệ những khiếu nại này. Bồi thường này sẽ không áp dụng nếu bên thứ
+            ba sử dụng thông tin xác thực của bạn do hành động hoặc thiếu sót của công ty FPT Software.
+        </p>
+
+        <h4 class="tieuDe4">| Điều khoản</h4>
+        <p class="p44">
+            <b> 1. Hiệu lực các điều khoản: </b> Các điều khoản này sẽ vẫn có hiệu lực đầy đủ trong khi bạn sử dụng
+            Codelearn.
+            Những điều khoản có thể tiếp tục hoạt động sau khi bạn ngừng sử dụng Codelearn (bao gồm nhưng không giới hạn
+            giấy phép nội dung của bạn đối với chúng tôi và các điều khoản chung trong phần này), sẽ tồn tại sau khi bạn
+            ngừng sử dụng Codelearn.
+        </p>
+        <p class="p44">
+            <b> 2. Khiếu nại: </b> Bạn đồng ý rằng bất kể điều luật nào trái với hoặc bất kỳ khiếu nại hoặc nguyên nhân
+            hành động
+            nào phát sinh từ hoặc liên quan đến việc sử dụng Codelearn hoặc các điều khoản này phải được nộp trong vòng
+            một 1 năm sau khi yêu cầu hoặc nguyên nhân của hành động đó phát sinh hoặc bị cấm vĩnh viễn.
+        </p>
+        <p class="p44">
+            <b> 3. Thông báo:</b> Bạn đồng ý rằng chúng tôi có thể cung cấp cho bạn các thông báo, bao gồm cả những thay
+            đổi
+            liên quan đến các điều khoản này, thông qua thông báo qua chức năng thông báo của Codelearn.
+        </p>
+        <p class="p44">
+            <b> 4. Hiệu lực: </b> Việc chúng tôi không thực hiện hoặc thực thi bất kỳ quyền hoặc quy định nào trong các
+            điều
+            khoản này sẽ không cấu thành từ bỏ quyền hoặc quy định đó. Nếu bất kỳ điều khoản nào trong các điều khoản
+            này được tòa án có thẩm quyền xét xử thấy là không hợp lệ, thì các bên vẫn đồng ý rằng tòa án sẽ nỗ lực để
+            có hiệu lực theo ý định của các bên như được phản ánh trong điều khoản và các điều khoản khác của điều khoản
+            này sẽ vẫn còn trong lực lượng đầy đủ và hiệu lực.
+        </p>
+
+        <p class="p44">
+            <b> 5. Chỉ định: </b> Bạn không được chỉ định tài khoản Codelearn của bạn hoặc bất kỳ quyền và giấy phép nào
+            được cấp
+            dưới đây và bất kỳ sự chuyển nhượng nào của bạn sẽ vô hiệu.
+        </p>
+
+        <p class="p44">
+            <b> 6. Vi phạm điều khoản: </b> Tất cả các phần của các điều khoản mà theo bản chất tương ứng của chúng sẽ
+            tồn tại
+            việc hủy bỏ hoặc chấm dứt các điều khoản này sẽ tồn tại khi chấm dứt hoặc hủy bỏ các điều khoản này. Bạn
+            đồng ý rằng việc vi phạm các điều khoản này sẽ gây ra tác hại không thể khắc phục và do đó, chúng tôi có thể
+            tìm kiếm sự cứu trợ bổ sung ngoài bất kỳ biện pháp pháp lý nào khác theo các điều khoản này theo luật hoặc
+            vốn chủ sở hữu.
+        </p>
+
+        <p class="p44" id="p44">
+            <b> 7. Đồng ý tuân theo các điều khoản: </b> Bạn đồng ý rằng trừ khi được quy định rõ ràng trong các điều
+            khoản này,
+            sẽ không có người thụ hưởng bên thứ ba nào trong điều khoản.
+        </p>
+
+
+
+
+    </section>
+
+
+    <section class="infomation">
+        <div class="infomationAds">
+            <div class="logo">
+                <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png"
+                    alt="">
+            </div>
+            <p class="infomationDesc">
+                CodeLearn là nền tảng tương tác trực tuyến hỗ trợ người dùng học tập, thực hành, thi đấu và đánh giá
+                kỹ năng lập trình một cách nhanh chóng và chính xác.
+            </p>
+
+        </div>
+
+
+
+        <div class="infomationDieuKhoan">
+            <div class="infomationDieuKhoanItem">
+                <h4 class="infomationDieuKhoanTieuDe">Liên kết</h4>
+                <p>
+                    <a href="#">Học tập</a>
+                </p>
+                <p>
+                    <a href="#">Luyện tập</a>
+                </p>
+                <p>
+                    <a href="#">Cuộc thi</a>
+                </p>
+
+            </div>
+
+            <div class="infomationDieuKhoanItem">
+                <h4 class="infomationDieuKhoanTieuDe">Thông tin</h4>
+                <p>
+                    <a href="#">Chia sẻ</a>
+                </p>
+                <p>
+                    <a href="#">Về chúng tôi</a>
+                </p>
+                <p>
+                    <a href="#">Điều khoản sử dụng</a>
+                </p>
+            </div>
+
+            <div class="infomationDieuKhoanItem">
+                <h4 class="infomationDieuKhoanTieuDe">Trợ giúp</h4>
+                <p>
+                    <a href="#">Hỗ trợ</a>
+                </p>
+                <p>
+                    <a href="#">Thảo luận</a>
+                </p>
+                <p>
+                    <a href="#">Liên hệ với chúng tôi</a>
+                </p>
+            </div>
+
+
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footerDesc">
+        <p>
+            Cung cấp bởi CodeLearn © 2021. Đã đăng ký bản quyền rev 12/13/2020 9:14:05 PM
+        </p>
+    </footer>
+
+
+
+</body>
+
+</html>

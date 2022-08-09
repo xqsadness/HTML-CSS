@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLearn</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: 'Mulish', sans-serif;
+
+        }
+
+
+         .thamGia
+        {
+            display: none;
+        }
+
+        /*navbar*/
+        .navBar {
+            background-color: rgb(241, 241, 241);
+            width: 100%;
+            
+            
+            top: 0px;
+        }
+
+
+
+
+        .navBar .button {
+            float: right;
+            font-size: 19px;
+            line-height: 19px;
+            padding: 16px 10px 16px 5px;
+        }
+
+        .navBar .buttonLight {
+            float: right;
+            font-size: 17px;
+            line-height: 19px;
+            padding: 27px 10px 16px 0px;
+        }
+
+        .navBar .buttonLight:hover {
+            margin-top: 16px;
+            border: 1px solid #ccc;
+            padding: 10px 9px 10px 10px;
+            background-color: #417ED7;
+            border-radius: 3px;
+        }
+
+        .navBar .buttonLight a:hover {
+            color: white;
+        }
+
+        .navBar .buttonLight a {
+            color: black;
+        }
+
+        .btnPrimary {
+            background-color: #2C31CF;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+
+        .navBar .icon {
+            width: 29px;
+            float: right;
+            position: relative;
+            right: 280px;
+            top: 21px;
+        }
+
+        .btnPrimary:hover {
+            color: white;
+            background-color: #417ED7;
+            border: 1px solid #ccc;
+        }
+
+        .navBar .buttonLight input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .navBar .button input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navBar .logo img {
+            float: left;
+            padding: 12px 0px 12px 20px;
+            width: 150px;
+            margin-right: 20px;
+
+        }
+
+        .navBar .menu .menuLv1 {
+            position: relative;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1 {
+            display: inline-block;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .tieuDeMenuLv1 {
+            color: blue;
+
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .menuLv2 {
+            display: block;
+        }
+
+
+
+        .navBar .menu .menuLv1 .itemMenuLv1 .tieuDeMenuLv1 {
+            padding: 28px 15px;
+            font-size: 17px;
+            line-height: 20px;
+            display: block;
+            color: black;
+        }
+
+        .navBar .menu .menuLv2 {
+            position: absolute;
+            display: none;
+            border: 1px solid #bbbbbb;
+            background-color: white;
+            padding: 0px 15px;
+        }
+
+
+        .navBar .menu .menuLv2 .itemMenuLv2 {
+            padding: 15px 0px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2 {
+            color: black;
+            font-size: 14px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2:hover {
+            color: deepskyblue;
+        }
+
+        /*showcase*/
+
+        .showCase .container {
+            padding: 40px 100px 200px 100px;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+
+
+        /*infomation*/
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem .mau {
+            color: #2C31CF;
+        }
+
+
+        .infomation .infomationAds {
+            width: 40%;
+            padding: 35px 0px 35px 90px;
+        }
+
+        .infomation .logo img {
+            width: 225px;
+        }
+
+        .infomation {
+            display: block;
+            position: relative;
+        }
+
+        .infomation .infomationDesc {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem {
+            float: right;
+            padding: 8px 50px 0px 0px;
+        }
+
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem h4 {
+            font-size: 20px;
+            color: #2C31CF;
+            margin-bottom: 20px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem p {
+            padding: 10px 60px 0px 0px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a {
+            color: #1C1D31;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a:hover {
+            text-decoration: underline;
+            color: #2C31CF;
+
+        }
+
+        .infomation .infomationDieuKhoan {
+            position: absolute;
+            right: 180px;
+            bottom: 45px;
+
+        }
+
+        /*showanh*/
+        .showAnh img {
+            margin-top: 140px;
+            width: 45%;
+            margin-left: 150px;
+
+        }
+
+        .showAnh .showAnhText {
+            background-color: white;
+            position: relative;
+            bottom: 360px;
+            left: 480px;
+        }
+
+        .showAnh .showAnhText {
+            border: 0px solid rgb(119, 119, 119);
+            border-radius: 4px;
+            width: 600px;
+            height: 200px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .showAnh .showAnhText .p1 {
+            font-size: 60px;
+            color: #2C31CF;
+        }
+
+        .showAnh .showAnhText .p2 {
+            font-size: 60px;
+            color: #2C31CF;
+            margin-top: 55px;
+        }
+
+        .showAnh .showAnhText .p3 {
+            font-size: 26px;
+            color: #1E266D;
+            margin-top: 30px;
+        }
+
+        .showAnh .showAnhText .p1 .p2 .p3 {
+            position: absolute;
+        }
+
+        /*form*/
+
+
+
+        .form {
+            position: absolute;
+            right: 100px;
+            top: 200px;
+            z-index: 1000;
+        }
+
+
+
+        .form .container p {
+            color: #1E266D;
+            font-size: 24px;
+        }
+
+        .form .mask {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            margin: auto;
+            width: 380px;
+            padding: 40px 20px;
+        }
+
+
+        .form input {
+            margin-top: 27px;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .form .inp {
+            width: 5%;
+        }
+
+
+        .form .mask .container input,
+        button {
+            display: block;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+        .form .mask .container input:focus,
+        button:focus {
+            border: 1px solid #417ED7;
+        }
+
+        .form .mask .container .inp {
+            display: inline-block;
+        }
+
+        .form .container button {
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            color: white;
+            background-color: #2C31CF;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        .form .container button:hover {
+            background-color: #4758f0;
+        }
+
+
+
+        .form label {
+            font-size: 16px;
+        }
+
+
+        /*hinhttron*/
+
+        .hinhTron {
+            width: 650px;
+            position: absolute;
+            right: 0px;
+        }
+
+        /*goithieu*/
+
+        .gioiThieu .gt
+        {
+            background-color:rgb(231, 231, 231);
+            width: 100%;
+            position: relative;
+            bottom: 550px;
+            height: 200px;
+        }
+
+        .gioiThieu .gt img
+        {
+            width: 5%;
+        }
+
+        .gioiThieu .gt .img img
+        {
+            margin-left: 110px;
+            margin-top: 43px;
+        }
+
+    /*text*/
+            .text{
+                position: relative;
+                bottom: 500px;
+                font-size: 44px;
+                text-align: center;
+                color: #1E266D;
+            }
+
+            .text .p1{
+                margin-bottom: 39px;
+
+            }
+
+        /*thamgia*/
+    
+        .thamGia .nen
+        {
+            background-color: #2C31BF;
+            width: 100%;
+            height: 300px;
+            position: relative;
+            bottom: 450px;
+          
+        }
+
+        .thamGia
+        {
+            margin-bottom: 60px;
+        }
+
+
+
+        .thamGia p{
+            float: right;
+            padding: 20px;
+           text-align: center;
+           color: white;
+           margin-right: 185px;
+           line-height: 1.5;
+           margin-top: 50px;
+           font-size: 30px;
+        }
+
+        .thamGia .bt
+        {
+            position: relative;
+            bottom: 550px;
+            left: 725px;
+           
+        }
+
+        .thamGia .bt button
+        {
+            padding: 20px 30px;
+            font-size: 16px;
+            line-height: 20px;
+            color: white;
+            background-color: #E8505B;
+            border-radius: 4px;
+            outline: none;
+            border: 0px;
+        }
+
+        .thamGia .bt button:hover
+        {
+            color: white;
+            background-color: #992c33;
+        }
+
+        /*laptrinh*/
+
+       
+
+        .loTrinh {
+            position: relative;
+            bottom: 380px;
+        }
+       
+
+        .loTrinh .laptrinhItem{
+            width: 20%;
+            float: left;
+            box-shadow: 2px 7px 9px #ccc;
+        }
+
+        .loTrinh .space{
+            margin-left:4% ;
+        }
+
+        .loTrinh h1
+        {
+            margin-top: 30px;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2C31CF;
+        }
+
+        .loTrinh p{
+            text-align: center;
+            font-size: 16px;
+            padding: 5px 10px;
+            color: #1b1d5e;
+        }
+
+        .loTrinh img {
+            transition: transform .5s, filter 1.5s ease-in-out;
+
+        }
+
+        .loTrinh img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+       
+
+        /*uu diem*/
+        .uuDiem .matNa
+        {
+           background-color: whitesmoke;
+           margin-top: 400px;
+           height: 800px;
+        }
+
+        .uuDiem
+        {
+           position: relative;
+         
+        }
+
+        .uuDiem h1
+        {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 40px;
+            color: #1E266D;
+        }
+
+        .uuDiem .h2 
+        {
+            float: right;
+            width: 46%;
+            margin-top: 80px;
+            line-height: 24px;
+        }
+
+        .uuDiem img
+        {
+            width: 50%;
+        
+        }
+
+        .uuDiem p{
+              
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: #1b1d5e;
+        }
+
+        .uuDiem .matNa .icon img
+        {
+            width: 5%;
+            margin-right: 10px;
+            margin-top: 20px;
+            position: relative;
+            top: 10px;
+        }
+
+       
+        /*khoi day*/
+
+        .khoiDay .nen
+        {
+            background: url(https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/footer-banner-bg.png);
+            width: 100%;
+            height: 300px;
+            position: relative;
+            bottom: 450px;
+          
+        }
+
+        .khoiDay span
+        {
+            color: #FAD93C;
+        }
+
+        .khoiDay
+        {
+            margin-top: 200px;
+        }
+
+        .khoiDay p{
+            margin-top: 30px;
+           text-align: center;
+           color: white;
+           line-height: 1.5;
+           font-size: 30px;
+           position: relative;
+           top: 40px;
+        }
+
+        .khoiDay .bt
+        {
+            position: relative;
+            bottom: 550px;
+            left: 755px;
+           
+        }
+
+        .khoiDay .bt button
+        {
+            padding: 20px 30px;
+            font-size: 16px;
+            line-height: 20px;
+            color: white;
+            background-color: #E8505B;
+            border-radius: 4px;
+            outline: none;
+            border: 0px;
+        }
+
+        .khoiDay .bt button:hover
+        {
+            color: white;
+            background-color: #992c33;
+        }
+
+        /*infomation*/
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem .mau{
+            color: #2C31CF;
+        }
+        .infomation .infomationAds {
+            width: 40%;
+            padding: 35px 0px 35px 90px;
+        }
+
+        .infomation .logo img {
+            width: 225px;
+        }
+
+        .infomation {
+            display: block;
+            position: relative;
+            border-top: 1px solid #ccc;
+            background-color: rgb(226, 223, 223);
+          
+        }
+
+        .infomation .infomationDesc {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem {
+            float: right;
+            padding: 8px 50px 0px 0px;
+        }
+
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem h4 {
+            font-size: 20px;
+            color: #2C31CF;
+            margin-bottom: 20px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem p {
+            padding: 10px 60px 0px 0px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a {
+            color: #1C1D31;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a:hover {
+            text-decoration: underline;
+            color: #2C31CF;
+
+        }
+
+        .infomation .infomationDieuKhoan {
+            position: absolute;
+            right: 180px;
+            bottom: 45px;
+
+        }
+
+        /*hinh anh hover*/
+
+        .content img {
+            transition: transform .5s, filter 1.5s ease-in-out;
+
+        }
+
+        .content img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+       
+
+
+        /*footer*/
+        .footerDesc {
+            background-color: #1C1D31;
+            padding: 15px 0px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        /* mobile */
+        @media (max-width:768px) {}
+
+        /* tablet */
+        @media (min-width:768px) and (max-width: 992px) {}
+
+        /* destop nho  */
+        @media (min-width: 992px) and (max-width: 1200px) {}
+
+        /* destop big */
+        @media (min-width: 1200px) {}
+    </style>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="logo">
+            <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png" alt="">
+        </div>
+
+        <div class="menu">
+            <ul class="menuLv1">
+
+                <li class="itemMenuLv1">
+                    <a class="tieuDeMenuLv1" href="http://127.0.0.1:5500/TrangChu.htm">Trang chủ</a>
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv1">Học tập</a>
+
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv1">Luyện Tập </a>
+                    <ul class="menuLv2">
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Kiến thức cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Lập trình cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Lập trình nâng cao</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Giải quyết vấn đề</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html" class="tieuDeMenuLv2">Kỹ năng nâng cao</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/ThaoLuan.html" class="tieuDeMenuLv1">Thảo Luận</a>
+                </li>
+
+                <div class="icon">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/vn.png" alt="">
+                </div>
+
+                <div class="button">
+                    <a href="http://127.0.0.1:5500/form.html"><input class="btn btnPrimary" type="submit"
+                            value="Đăng nhập"></a>
+                </div>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/game.html" class="tieuDeMenuLv1">Game</a>
+
+                </li>
+
+
+                <div class="buttonLight">
+                    <a href="http://127.0.0.1:5500/form.html" class="btn btnLight">Đăng ký</a>
+                </div>
+
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <main>
+
+      
+
+
+        <section class="showAnh">
+            <div class="showAnhHinh">
+                <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/head-left-bg.png"
+                    alt="">
+
+            </div>
+
+            <div class="showAnhText">
+                <p class="p1">
+                    <b>HỌC LẬP TRÌNH</b>
+
+                </p>
+                <p class="p2">
+                    <b>TỪ CON SỐ 0</b>
+                </p>
+                <p class="p3">
+                    Khởi đầu dễ dàng hơn với CodeLearn
+                </p>
+            </div>
+        </section>
+
+        <section class="form">
+            <div class="mask">
+                <div class="container">
+                    <p><b> Bắt Đầu Ngay</b></p>
+                    <input type="text" placeholder="Tên đăng nhập">
+
+                    <input type="email" placeholder="Email">
+
+                    <input type="password" placeholder="Mật khẩu">
+
+                    <input class="inp" type="checkbox">
+                    <label for="">Đồng ý với Điều khoản của CodeLearn</label>
+
+                    <button>Đăng ký</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gioiThieu">
+            <div class="gt">
+                <div class="img">
+
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-fpt.png" alt="">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-FUNiX.png" alt="">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-polytehnic.png" alt="">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-dhspkthungyen.png" alt="">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-fpt.png" alt="">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-FUNiX.png" alt="">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-polytehnic.png" alt="">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/logo/logo-dhspkthungyen.png" alt="">
+
+            </div>
+
+           
+        </section>
+
+        <section class="text">
+            <p class="p1"> <b>Lập trình </b>
+            </p>
+            <p> <b> là xu thế của tương lai </b>  </p>
+        </section>
+
+        <section class="thamGia">
+            <div class="nen">
+                <div class="p1">
+                    <p>60000+
+                        <br>
+                        Học viên đăng ký
+                    </p>
+                  
+                </div>
+                <div class="p2">
+                    <p>10000+
+                        <br>
+                        Chứng chỉ đã được trao
+                    </p>
+                   
+                   
+                </div>
+                <div class="p3">
+                    <p>5
+                        <br>
+                        Quốc gia đã sử dụng
+                    </p>
+                  
+                </div>
+            </div>
+
+            <div class="bt">
+                <button>Tham gia học lập trình ngay!</button>
+            </div>
+           
+
+        </section>
+
+        <section class="text">
+            <p class="p1"> <b>Lộ trình trở thành </b>
+            </p>
+            <p> <b> lập trình viên </b>  </p>
+        </section>
+
+
+        <section class="loTrinh">
+            <div class="laptrinhItem space">
+                <a href="#"><img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/hoc-lap-trinh.png" alt=""></a>
+                <h1>Học lập trình</h1>
+                <p>Học lập trình cơ bản đến nâng cao thông qua các khóa học.</p>
+            </div>
+            <div class="laptrinhItem space">
+                <a href="#"><img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/luyen-lap-trinh.png" alt=""></a>
+                <h1>Luyện lập trình</h1>
+                <p>Luyện lập trình hằng ngày với hàng nghìn bài tập lớn nhỏ.</p>
+            </div>
+            <div class="laptrinhItem space">
+                <a href="#"><img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/thi-lap-trinh.png" alt=""></a>
+                <h1>Thi lập trình</h1>
+                <p>Tham gia các cuộc thi và cải thiện kỹ năng lập trình liên tục.</p>
+            </div>
+            <div class="laptrinhItem space">
+                <a href="#"><img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/chia-se-lap-trinh.png" alt=""></a>
+                <h1>Tìm hiểu lập trình</h1>
+                <p>Tìm hiểu kiến thức lập trình thông qua chia sẻ từ các chuyên gia.</p>
+            </div>
+
+
+        </section>
+
+
+        <section class="uuDiem">
+            <div class="matNa">
+                <h1>CodeLearn
+                    Ưu điểm vượt trội</h1>
+                <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/advantages-section/doi-ngu-ho-tro-codelearn.png" alt="">
+
+                <div class="h2">
+                    <div class="icon">
+                        <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/advantages-section/icon-code.png" alt="">
+                    <a href=""><p>Hệ thống mạnh mẽ, hiện đại</p></a>
+                    </div>
+
+                    <div class="icon">
+                        <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/advantages-section/icon-hoc.png" alt="">
+                    <a href=""><p>Nội dung dễ hiểu, chi tiết</p></a>
+                    </div>
+
+                    <div class="icon">
+                        <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/advantages-section/icon-chung-nhan.png" alt="">
+                    <a href=""><p>Sự kiện hấp dẫn, thu hút</p></a>
+                    </div>
+
+                    <div class="icon">
+                        <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/advantages-section/icon-cong-dong.png" alt="">
+                    <a href=""><p>Cộng đồng đông đảo, năng động</p></a>
+                    </div>
+
+                    <div class="icon">
+                        <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/landing-v2/advantages-section/icon-doi-ngu-codelearn.png" alt="">
+                    <a href=""><p>Đội ngũ nhiệt tình, có chuyên môn</p></a>
+                    </div>
+                
+                
+                </div>
+            </div>
+        </section>
+
+
+       
+
+        
+
+
+        <section class="infomation">
+            <div class="infomationAds">
+                <div class="logo">
+                    <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png"
+                        alt="">
+                </div>
+                <p class="infomationDesc">
+                    CodeLearn là nền tảng tương tác trực tuyến hỗ trợ người dùng học tập, thực hành, thi đấu và đánh giá
+                    kỹ năng lập trình một cách nhanh chóng và chính xác.
+                </p>
+    
+            </div>
+    
+    
+    
+            <div class="infomationDieuKhoan">
+                <div class="infomationDieuKhoanItem">
+                    <h4 class="infomationDieuKhoanTieuDe">Liên kết</h4>
+                    <p>
+                        <a href="#">Học tập</a>
+                    </p>
+                    <p>
+                        <a href="#">Luyện tập</a>
+                    </p>
+                    <p>
+                        <a href="#">Cuộc thi</a>
+                    </p>
+    
+                </div>
+    
+                <div class="infomationDieuKhoanItem">
+                    <h4 class="infomationDieuKhoanTieuDe">Thông tin</h4>
+                    <p>
+                        <a href="#">Chia sẻ</a>
+                    </p>
+                    <p>
+                        <a href="#">Về chúng tôi</a>
+                    </p>
+                    <p>
+                        <a class="mau" href="http://127.0.0.1:5500/DieuKhoan.html">Điều khoản sử dụng</a>
+                    </p>
+                </div>
+    
+                <div class="infomationDieuKhoanItem">
+                    <h4 class="infomationDieuKhoanTieuDe">Trợ giúp</h4>
+                    <p>
+                        <a href="#">Hỗ trợ</a>
+                    </p>
+                    <p>
+                        <a href="#">Thảo luận</a>
+                    </p>
+                    <p>
+                        <a href="#">Liên hệ với chúng tôi</a>
+                    </p>
+                </div>
+    
+    
+            </div>
+        </section>
+    
+        <footer class="footerDesc">
+            <p>
+                Cung cấp bởi CodeLearn © 2021. Đã đăng ký bản quyền rev 12/13/2020 9:14:05 PM
+            </p>
+        </footer>
+    
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

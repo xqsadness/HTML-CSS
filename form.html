@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+         @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        form .dieuKhoan{
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        form .dangKy h1 , p
+        {
+            color: #1E266D;
+        }
+
+        body{
+            background-color: rgb(61, 128, 216);
+            font-family: 'Mulish', sans-serif;
+        }
+
+        form{
+            background-color: white;
+            margin: auto;
+            width: 380px;
+            margin-top: 50px;
+            padding: 40px 20px;
+        }
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: 'Mulish', sans-serif;
+        }
+
+        /*navbar*/
+        .navBar {
+            background-color: rgb(241, 241, 241);
+            width: 100%;
+
+        }
+
+
+        .navBar .button {
+            float: right;
+            font-size: 19px;
+            line-height: 19px;
+            padding: 16px 10px 16px 5px;
+        }
+
+        .navBar .buttonLight {
+            float: right;
+            font-size: 17px;
+            line-height: 19px;
+            padding: 27px 10px 16px 0px;
+        }
+
+        .navBar .buttonLight:hover {
+            margin-top: 16px;
+            border: 1px solid #ccc;
+            padding: 10px 9px 10px 10px;
+            background-color: #417ED7;
+            border-radius: 3px;
+        }
+
+        .navBar .buttonLight a:hover {
+            color: white;
+        }
+
+        .navBar .buttonLight a {
+            color: black;
+        }
+
+        .btnPrimary {
+            background-color: #2C31CF;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+
+        .navBar .icon {
+            width: 29px;
+            float: right;
+            position: relative;
+            right: 280px;
+            top: 21px;
+        }
+
+        .btnPrimary:hover {
+            color: white;
+            background-color: #417ED7;
+            border: 1px solid #ccc;
+        }
+
+        .navBar .buttonLight input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .navBar .button input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: white;
+        }
+
+         input:focus{
+            outline: none;
+            border: 1px solid #2C31CF;
+        }
+
+        .navBar .logo img {
+            float: left;
+            padding: 12px 0px 12px 20px;
+            width: 150px;
+            margin-right: 20px;
+
+        }
+
+        .navBar .menu .menuLv1 {
+            position: relative;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1 {
+            display: inline-block;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .tieuDeMenuLv1 {
+            color: blue;
+
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .menuLv2 {
+            display: block;
+        }
+
+
+
+        .navBar .menu .menuLv1 .itemMenuLv1 .tieuDeMenuLv1 {
+            padding: 28px 15px;
+            font-size: 17px;
+            line-height: 20px;
+            display: block;
+            color: black;
+        }
+
+        .navBar .menu .menuLv2 {
+            position: absolute;
+            display: none;
+            border: 1px solid #bbbbbb;
+            background-color: white;
+            padding: 0px 15px;
+        }
+
+
+        .navBar .menu .menuLv2 .itemMenuLv2 {
+            padding: 15px 0px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2 {
+            color: black;
+            font-size: 14px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2:hover {
+            color: deepskyblue;
+        }
+
+
+        .dangKy{
+            text-align: center;
+        }
+
+        .tieuDe{
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        label, input{
+            display: block;
+            width: 100%;
+        }
+
+        form input{
+            padding: 13px;
+            border: 1px solid rgb(199, 198, 198);
+            border-radius: 4px;
+            margin-bottom: 33px;
+            margin-top: 20px;
+        }
+
+        .bt{
+            
+            color:white;
+            background-color: #2C31CF;
+          
+        }
+
+        .bthover:hover{
+            background-color:#3f45f7;
+                    
+        }
+
+        a{
+            text-decoration: none;
+            color:#2C31CF;
+        }
+        p .sang
+        {
+            color: #2C31CF;;
+        }
+
+        .hasAccount{
+            margin-top: 20px;
+            color: white;
+            text-align: center;
+           
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <div class="logo">
+            <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png" alt="">
+        </div>
+
+        <div class="menu">
+            <ul class="menuLv1">
+
+                <li class="itemMenuLv1">
+                    <a class="tieuDeMenuLv1" href="http://127.0.0.1:5500/TrangChu.htm">Trang chủ</a>
+                </li>
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv1">Học tập</a>
+
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="#" class="tieuDeMenuLv1">Luyện Tập </a>
+                    <ul class="menuLv2">
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Kiến thức cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Lập trình cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Lập trình nâng cao</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Giải quyết vấn đề</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Kỹ năng nâng cao</a>
+                        </li>
+                    </ul>
+                </li>
+
+                
+                
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/ThaoLuan.html" class="tieuDeMenuLv1">Thảo Luận</a>
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/game.html" class="tieuDeMenuLv1">Game</a>
+
+                </li>
+
+                <div class="button">
+                    <a href="http://127.0.0.1:5500/form.html"><input class="btn btnPrimary" type="submit"
+                            value="Đăng nhập"></a>
+                </div>
+
+                <div class="buttonLight">
+                    <a href="http://127.0.0.1:5500/form.html" class="btn btnLight">Đăng ký</a>
+                </div>
+
+
+            </ul>
+
+        </div>
+
+
+
+
+    </nav>
+
+    <form class="form" action="">
+        <div class="dangKy">
+            <h1 class="tieuDe">Đăng Ký</h1>
+            <p>Đăng ký tài khoản</p>
+        </div>
+
+        
+        <input type="text" placeholder="Họ">
+
+        
+        <input type="text" name="ten" id="ten" placeholder="Tên">
+
+        
+        <input type="email" name="email" id="email" placeholder="Email">
+
+        
+        <input type="password" name="password" id="password" placeholder="Mật khẩu">
+
+     
+        <input type="password" name="repassword" id="repassword" placeholder="Nhập lại mật khẩu">
+
+        <input class="bt bthover" type="submit" value="Đăng Ký">
+
+      
+        <p class="dieuKhoan"> Khi click vào nút đăng nhập bạn đồng ý
+            với các
+            <a href="#"> <b> Điều Khoản </b></a>
+            và
+            <a href="#"> <b> Chính Sách Bảo Mật </b></a>
+            của chúng tôi.
+           
+        </p>
+
+    </form>
+
+    <p class="hasAccount">Đã có tài khoản ? <a class="sang" href="#"> <b> Đăng Nhập</b> </a></p>
+
+</body>
+
+</html>

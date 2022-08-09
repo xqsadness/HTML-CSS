@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao Luan</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /*navbar*/
+
+        .navBar {
+            background-color: rgb(241, 241, 241);
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            box-shadow: 3px 3px 7px #ccc;
+        }
+
+
+        .navBar .button {
+            float: right;
+            font-size: 19px;
+            line-height: 19px;
+            padding: 16px 10px 16px 5px;
+        }
+
+        .navBar .buttonLight {
+            float: right;
+            font-size: 17px;
+            line-height: 19px;
+            padding: 27px 10px 16px 0px;
+        }
+
+        .navBar .buttonLight:hover {
+            margin-top: 16px;
+            border: 1px solid #ccc;
+            padding: 10px 9px 10px 10px;
+            background-color: #417ED7;
+            border-radius: 3px;
+        }
+
+        .navBar .buttonLight:hover a {
+            color: white;
+        }
+
+        .navBar .buttonLight a {
+            color: black;
+        }
+
+        .btnPrimary {
+            background-color: #2C31CF;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+
+        .navBar .icon {
+            width: 29px;
+            float: right;
+            position: relative;
+            right: 280px;
+            top: 21px;
+        }
+
+        .btnPrimary:hover {
+            color: white;
+            background-color: #417ED7;
+            border: 1px solid #ccc;
+            transition: all 300ms;
+        }
+
+        .navBar .buttonLight input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: black;
+        }
+
+        .navBar .button input {
+            padding: 10px 22px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .navBar .logo img {
+            float: left;
+            padding: 12px 0px 12px 20px;
+            width: 150px;
+            margin-right: 20px;
+
+        }
+
+        .navBar .menu .menuLv1 {
+            position: relative;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1 {
+            display: inline-block;
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .tieuDeMenuLv1 {
+            color: blue;
+
+        }
+
+        .navBar .menu .menuLv1 .itemMenuLv1:hover .menuLv2 {
+            display: block;
+        }
+
+
+
+        .navBar .menu .menuLv1 .itemMenuLv1 .tieuDeMenuLv1 {
+            padding: 28px 15px;
+            font-size: 17px;
+            line-height: 20px;
+            display: block;
+            color: black;
+        }
+
+
+
+
+        .navBar .menu .menuLv2 {
+            position: absolute;
+            display: none;
+            border: 1px solid #bbbbbb;
+            background-color: white;
+            padding: 0px 15px;
+        }
+
+
+        .navBar .menu .menuLv2 .itemMenuLv2 {
+            padding: 15px 0px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2 {
+            color: black;
+            font-size: 14px;
+        }
+
+        .navBar .menu .menuLv2 .itemMenuLv2 .tieuDeMenuLv2:hover {
+            color: deepskyblue;
+        }
+
+
+
+
+        /*customer*/
+
+        .customerReview {
+            
+            width: 80%;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .customerReview .container {
+            padding: 50px 0px 100px 0px;
+        }
+
+        .customerReview .customerReviewItem {
+            background-color: rgb(236, 236, 236);
+            margin-top: 3px;
+            overflow: auto;
+            padding: 40px 30px;
+
+        }
+
+        body {
+            font-size: 14px;
+            line-height: 18px;
+            font-family: 'Mulish', sans-serif;
+        }
+
+
+
+        .customerReview .customerReviewItemAvt {
+            width: 10%;
+            float: left;
+        }
+
+        .customerReview .customerReviewItemAvt img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+
+        .customerReview .customerReviewItemContent {
+            width: 70%;
+            float: left;
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
+        .customerReview .customerReviewItemContent a {
+            color: black;
+
+        }
+
+        .customerReview .customerReviewItemContent a:hover {
+            color: #2C31CF;
+            text-decoration: underline;
+        }
+
+
+        .customerReview .customerReviewItemContent .p1 {
+            font-size: 18px;
+        }
+
+        .customerReview .customerReviewItemContent .p2 {
+            font-size: 15px;
+            line-height: 18px;
+            margin-top: 10px;
+        }
+
+        .customerReview .customerReviewItemContent .p3 {
+            border: 1px solid #ccc;
+            width: 4%;
+            padding: 2px 1px;
+            background-color: #bbb;
+            margin-top: 10px;
+        }
+
+        .customerReview .customerReviewTieuDe {
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+
+        /* thao luan note*/
+
+        .thaoLuan .note {
+            margin-top: 100px;
+            margin-left: 10%;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .note a {
+            color: #2C31CF;
+        }
+
+        .note a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+        /*infomation*/
+
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem .mau{
+            color: #2C31CF;
+        }
+        .infomation .infomationAds {
+            width: 40%;
+            padding: 35px 0px 35px 90px;
+        }
+
+        .infomation .logo img {
+            width: 225px;
+        }
+
+        .infomation {
+            display: block;
+            position: relative;
+            border-top: 1px solid #ccc;
+            background-color: whitesmoke;
+        }
+
+        .infomation .infomationDesc {
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem {
+            float: right;
+            padding: 8px 50px 0px 0px;
+        }
+
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem h4 {
+            font-size: 20px;
+            color: #2C31CF;
+            margin-bottom: 20px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem p {
+            padding: 10px 60px 0px 0px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a {
+            color: #1C1D31;
+            font-size: 15px;
+        }
+
+        .infomation .infomationDieuKhoan .infomationDieuKhoanItem a:hover {
+            text-decoration: underline;
+            color: #2C31CF;
+
+        }
+
+        .infomation .infomationDieuKhoan {
+            position: absolute;
+            right: 180px;
+            bottom: 45px;
+
+        }
+
+        /*hinh anh hover*/
+
+        .content img {
+            transition: transform .5s, filter 1.5s ease-in-out;
+
+        }
+
+        .content img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+
+        /*footer*/
+        .footerDesc {
+            background-color: #1C1D31;
+            padding: 15px 0px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        /*showimage*/
+     
+
+        .showImage .container .search .btnSearch {
+            padding: 15px 243px 15px 15px;
+            margin-top: 40px;
+            margin-left: 150px;
+            margin-left: 169px;
+
+        }
+
+        .showImage .container .search .btnSearch:focus {
+            outline: none;
+        }
+        .showImage .container .search 
+        
+
+
+        .showImage .container input {
+            font-size: 16px;
+        }
+        /*bt*/
+        .bt button{
+            margin-left: 170px;
+            margin-top: 10px;
+            padding: 7px 15px;
+            color: white;
+            background-color: #2C31CF;
+            border-radius: 4px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .bt button:focus{
+            outline: none;
+        }
+
+        button:hover{
+            background-color :#417ED7;
+        
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <div class="logo">
+            <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png" alt="">
+        </div>
+
+        <div class="menu">
+            <ul class="menuLv1">
+
+                <li class="itemMenuLv1">
+                    <a class="tieuDeMenuLv1" href="http://127.0.0.1:5500/TrangChu.htm">Trang chủ</a>
+                </li>
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv1">Học tập</a>
+
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="#" class="tieuDeMenuLv1">Luyện Tập </a>
+                    <ul class="menuLv2">
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Kiến thức cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Lập trình cơ sở</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Lập trình nâng cao</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Giải quyết vấn đề</a>
+                        </li>
+                        <li class="itemMenuLv2">
+                            <a href="http://127.0.0.1:5500/Hoc-tap.html#" class="tieuDeMenuLv2">Kỹ năng nâng cao</a>
+                        </li>
+                    </ul>
+                </li>
+
+            
+
+                <li class="itemMenuLv1">
+                    <a href="" class="tieuDeMenuLv1">Thảo Luận</a>
+                </li>
+
+                <li class="itemMenuLv1">
+                    <a href="http://127.0.0.1:5500/game.html" class="tieuDeMenuLv1">Game</a>
+
+                </li>
+
+                <div class="button">
+                    <input class="btn btnPrimary" type="submit" value="Đăng nhập">
+                </div>
+
+                <div class="buttonLight">
+                    <a href="http://127.0.0.1:5500/form.html" class="btn btnLight">Đăng ký</a>
+                </div>
+
+
+            </ul>
+
+        </div>
+
+
+
+
+    </nav>
+
+
+    <section class="thaoLuan">
+        <div class="note">
+            <a href="#">Trang chủ</a>
+            <span> > </span>
+            <a href="#">Thảo luận</a>
+        </div>
+    </section>
+
+    <div class="showImage">
+        <div class="container">
+            <div class="search">
+                <input class="btnSearch" type="text" placeholder="Nhập nội dung tìm kiếm">
+            </div>
+        </div>
+    </div>
+
+    <div class="bt">
+        <button>Tìm kiếm</button>
+    </div>
+
+    <section class="customerReview">
+        <div class="mask">
+
+            <div class="container">
+                <h1 class="customerReviewTieuDe"> </h1>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFgZ0Waa7MS6CB8D5IcsbPJMQhKiz1VsZL2w&usqp=CAU"
+                            alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Các bạn có thể sửa bài này của mình được không ạ?</b></a>
+                        <p class="p2">nhập mảng in ra phần tử lớn nhất và nhỏ nhất trong mảngđây là bài của
+                            mình:#include usingnamespace std;int max(int a[], int n){int max = a[0];for (int i
+                            = 1; </p>
+
+                        <p class="p3">C++</p>
+
+                    </div>
+                </div>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/447367629487403922/6179E6D125BDDF9B150C6802DFA74247F4A02FFE/"
+                            alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Giao diện tối dành cho ban đêm</b></a>
+                        <p class="p2">Chào các admin! Em rất cảm ơn vì mọi người đã dành công sức ra để làm và phát
+                            triển 1 web tuyệt vời như vậy. Nhưng em mong muốn </p>
+
+                        <p class="p3">Dark </p>
+
+                    </div>
+                </div>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://lh6.googleusercontent.com/-84019F2OAQg/Tf8qZ_GLpYI/AAAAAAAAABM/d-aS-jJL4p0/w1200-h630-p-k-no-nu/anonymouslogo.jpg"
+                            alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Ai biết code C vào chỉ em với ạ</b></a>
+                        <p class="p2">Có ai chỉ cho mình thủ thuật code C dùng con trỏ với hàm con trỏ khác con trỏ hàm
+                            và cách ứng dụng và vì sao lại sinh ra </p>
+
+                        <p class="p3">C++</p>
+
+                    </div>
+                </div>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5xY9Em5pOwVa-XKT-ngo1d0AAXfWzii9U-Q&usqp=CAU"
+                            alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Help ! Tìm hiểu thêm</b></a>
+                        <p class="p2">Chào mọi người Cho mình hỏi Codelearn có các khóa học về HTML CSS PHP hay an ninh
+                            mạng gì không ạ!!</p>
+
+                        <p class="p3">PHP</p>
+
+                    </div>
+                </div>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://i.pinimg.com/280x280_RS/54/bd/6e/54bd6e9457f19de6ab1f37ea24e53c6b.jpg" alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Code ẩn</b></a>
+                        <p class="p2">Code ẩn thì mở làm sao vậy mọi người</p>
+
+                        <p class="p3">Code</p>
+
+                    </div>
+                </div>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://i.pinimg.com/736x/cc/16/0c/cc160c19dbd165c43046c176223f10fe.jpg" alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Truyền dữ liệu dùng con trỏ</b></a>
+                        <p class="p2">Truyền dữ liệu trong contro thế nào cho đúng ạ.Em học C ạ.Một biến mà có thể thay
+                            đổi giá trị trong quá trình chạy ctr thì truyền giá tr!</p>
+
+                        <p class="p3">C#</p>
+
+                    </div>
+                </div>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://3.bp.blogspot.com/-fQvjY3s0874/WtCmIY6XUHI/AAAAAAAABVA/cY8-bRm9MeINDNreZdABXU2kb7fHqcBCgCLcBGAs/s1600/2-min.jpg"
+                            alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Cách nào để coder kiếm tiền tự do mà không đi làm công ty?</b></a>
+                        <p class="p2">Mình thích lập trình và đã tốt nghiệp ngành điện tử viễn thông, ngành mình học có
+                            phần nhúng nhưng cơ hội việc làm không nhiều. Hiện tại mình đã</p>
+
+                        <p class="p3">Wor</p>
+
+                    </div>
+                </div>
+
+                <div class="customerReviewItem">
+                    <div class="customerReviewItemAvt">
+                        <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/code-learn/user-default.svg"
+                            alt="">
+                    </div>
+                    <div class="customerReviewItemContent">
+                        <a href="#" class="p1"><b>Tìm Bảng thuật ngữ code</b></a>
+                        <p class="p2">Có ai biết bảng thuật ngữ các câu lệnh trong c++ cho mình xin với ạ.Thanks!</p>
+
+                        <p class="p3">C++</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="infomation">
+        <div class="infomationAds">
+            <div class="logo">
+                <img src="https://codelearn.io/Themes/TheCodeCampPro/Resources/Images/new-header/codelearn-logo.png"
+                    alt="">
+            </div>
+            <p class="infomationDesc">
+                CodeLearn là nền tảng tương tác trực tuyến hỗ trợ người dùng học tập, thực hành, thi đấu và đánh giá
+                kỹ năng lập trình một cách nhanh chóng và chính xác.
+            </p>
+
+        </div>
+
+
+
+        <div class="infomationDieuKhoan">
+            <div class="infomationDieuKhoanItem">
+                <h4 class="infomationDieuKhoanTieuDe">Liên kết</h4>
+                <p>
+                    <a href="#">Học tập</a>
+                </p>
+                <p>
+                    <a href="#">Luyện tập</a>
+                </p>
+                <p>
+                    <a href="#">Cuộc thi</a>
+                </p>
+
+            </div>
+
+            <div class="infomationDieuKhoanItem">
+                <h4 class="infomationDieuKhoanTieuDe">Thông tin</h4>
+                <p>
+                    <a href="#">Chia sẻ</a>
+                </p>
+                <p>
+                    <a href="#">Về chúng tôi</a>
+                </p>
+                <p>
+                    <a class="mau" href="http://127.0.0.1:5500/DieuKhoan.html">Điều khoản sử dụng</a>
+                </p>
+            </div>
+
+            <div class="infomationDieuKhoanItem">
+                <h4 class="infomationDieuKhoanTieuDe">Trợ giúp</h4>
+                <p>
+                    <a href="#">Hỗ trợ</a>
+                </p>
+                <p>
+                    <a href="#">Thảo luận</a>
+                </p>
+                <p>
+                    <a href="#">Liên hệ với chúng tôi</a>
+                </p>
+            </div>
+
+
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footerDesc">
+        <p>
+            Cung cấp bởi CodeLearn © 2021. Đã đăng ký bản quyền rev 12/13/2020 9:14:05 PM
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
